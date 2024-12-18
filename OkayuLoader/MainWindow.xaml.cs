@@ -37,7 +37,7 @@ namespace OkayuLoader
             this.InitializeComponent();
             CurrentInstance = this;
 
-            TitleBarTextBlock.Text = AppInfo.Current.DisplayInfo.DisplayName;
+            TitleBarTextBlock.Text = "Okayu Loader";
             ExtendsContentIntoTitleBar = true;
 
             IntPtr screenDC = GetDC(IntPtr.Zero);
