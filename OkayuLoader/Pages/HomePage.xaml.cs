@@ -29,9 +29,10 @@ namespace OkayuLoader.Pages
 
         private void ToggleSwitchAutoLoginHandler(object sender, RoutedEventArgs e)
         {
-                if (ToggleSwitchAutoLogin.IsOn == true) uiConfig.useAutoLogin = true;
-                if (ToggleSwitchAutoLogin.IsOn == false) uiConfig.useAutoLogin = false;
-                configService.Save(uiConfig);
+            if (ToggleSwitchAutoLogin.IsOn == true) uiConfig.useAutoLogin = true;
+            if (ToggleSwitchAutoLogin.IsOn == false) uiConfig.useAutoLogin = false;
+            uiConfig.welcome = false;
+            configService.Save(uiConfig);
         }
 
         private void ToggleSwitchPatcherHandler(object sender, RoutedEventArgs e)
